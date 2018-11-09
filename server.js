@@ -15,23 +15,23 @@ app.use(express.json());
 //middleware for static assests like styel.css
 app.use(express.static(__dirname + "/app/public"))
 
-//MYSQL connection info
-var connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "password",
-    database: "datingApp_db"
-});
+// //MYSQL connection info
+// var connection = mysql.createConnection({
+//     host: "localhost",
+//     port: 3306,
+//     user: "root",
+//     password: "password",
+//     database: "datingApp_db"
+// });
 
-// Initiate MySQL Connection.
-connection.connect(function (err) {
-    if (err) {
-        console.error("error connecting: " + err.stack);
-        return;
-    }
-    console.log("connected to database");
-});
+// // Initiate MySQL Connection.
+// connection.connect(function (err) {
+//     if (err) {
+//         console.error("error connecting: " + err.stack);
+//         return;
+//     }
+//     console.log("connected to database");
+// });
 
 //routes
 //htmls
