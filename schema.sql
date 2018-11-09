@@ -9,3 +9,4 @@ CREATE TABLE friends (
     scores INT (1)
 )
 
+INSERT INTO friends (name, photo, scores) VALUES ("Dexter", "http://www.toptensthings.com/wp-content/uploads/2012/03/8.-Dexter-of-Dexters-Laboratory.jpg", )

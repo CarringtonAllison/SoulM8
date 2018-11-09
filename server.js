@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //middleware for static assests like styel.css
-app.use('/assets', express.static("assets"))
+app.use(express.static(__dirname + "/app/public"))
 
 //MYSQL connection info
 var connection = mysql.createConnection({
@@ -34,12 +34,11 @@ connection.connect(function (err) {
 });
 
 //routes
-//html
+//htmls
 require("./app/routing/apiRoutes")(app);
 
-//api
+//apis
 require("./app/routing/htmlRoutes")(app);
-
 
 
 
