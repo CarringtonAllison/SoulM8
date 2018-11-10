@@ -1,41 +1,39 @@
-
-
-
 var questions = [
     {
-        question: `Which movie contains the quote "Say hello to my little friend"?`,
+        question: "You find it easy to stay relaxed and focused even when there is some pressure."
+        ,
         answers: [1, 2, 3, 4, 5]
     },
     {
-        question: `Which actress was part of the movie "Suicide Squad"?`,
+        question: "Generally speaking, you rely more on your experience than your imagination.",
         answers: [1, 2, 3, 4, 5]
     },
     {
-        question: "What was the first monster to appear alongside Godzilla?",
+        question: "Your mind is always buzzing with unexplored ideas and plans",
         answers: [1, 2, 3, 4, 5]
     },
     {
-        question: "Which of these movies did Jeff Bridges not star in?",
+        question: "It is often difficult for you to relate to other people’s feelings",
         answers: [1, 2, 3, 4, 5]
     },
     {
-        question: "Which actor plays Obi-Wan Kenobi in Star Wars Episodes I-III?",
+        question: "You rarely do something just out of sheer curiosity.",
         answers: [1, 2, 3, 4, 5]
     },
     {
-        question: "Who is the frontman of the band 30 Seconds to Mars?",
+        question: "People can rarely upset you.",
         answers: [1, 2, 3, 4, 5]
     },
     {
-        question: "Which Twitch streamer is the vocalist for Red Vox?",
+        question: "You think that everyone’s views should be respected regardless of whether they are supported by facts or not.",
         answers: [1, 2, 3, 4, 5]
     },
     {
-        question: "Who is the lead singer of Pearl Jam?",
+        question: "You rarely get carried away by fantasies and ideas.",
         answers: [1, 2, 3, 4, 5]
     },
     {
-        question: "Ringo Starr of The Beatles mainly played what instrument?",
+        question: "In a discussion, truth should be more important than people’s sensitivities.",
         answers: [1, 2, 3, 4, 5]
     },
 ];
@@ -44,20 +42,24 @@ let answerArr = [];
 
 
 function renderQuestions(index) {
-    var $form = $("<form>").attr("data-value", index)
-    var $question = $("<h3>").text(questions[index].question)
+    let $divCard = $("<div>")
+    var $form = $("<form>").attr("data-value", index).addClass("ghost")
+    var $question = $("<h5>").text(questions[index].question).addClass("cardText")
     $form.append($question);
 
     questions[index].answers.forEach(function (answer, i) {
-        var $input = $('<input type="radio">');
-        $input.attr("value", answer);
-        $input.attr("name", index);
-        $form.append($input);
+        var $radio = $('<input type="radio">');
+        $radio.attr("value", answer).addClass("btnSpace");
+        $radio.attr("name", index);
+        $form.append($radio);
         $form.append(answer);
     });
+    let $div = $("<div>")
     let $button = $("<button>").data("question", index).text("Next").addClass("nextButton")
+    $form.append($div);
     $form.append($button)
-    $("#questions").append($form);
+    $divCard.append($form)
+    $("#head").append($divCard);
 
 }
 
@@ -74,12 +76,13 @@ $(document).on("click", ".nextButton", function () {
     console.log($thatForm);
 
     if (index < 8) {
-        $("form").data("value", index).addClass("hidden");
+        $(".ghost").data("value", index).hide(300);
         checkTrivia(index);
         renderQuestions(index + 1)
-    } else {
 
-        end();
+    } else {
+        $("#proceed").show(500)
+        $(".nextButton").hide(1000)
     }
 })
 
@@ -96,29 +99,24 @@ function checkTrivia(index) {
     });
 }
 
-function end() {
-    console.log("working")
-}
-
 
 
 
 
 $("#proceed").on("click", function(event) {
-    
     event.preventDefault();
 
     var newFriend = {
       name: $("#name").val().trim(),
       photo: $("#photo").val().trim(),
+      scores: answerArr
     };
     console.log(newFriend)
-
     
+        // Question: What does this code do??
+        $.post("/api/friends", newFriend)
+          .then(function(data) {
+            console.log(data);
+          });
 });
 
-    // // Question: What does this code do??
-    // $.post("/api/friends", newFriend)
-    //   .then(function(data) {
-    //     console.log(data);
-    //   });

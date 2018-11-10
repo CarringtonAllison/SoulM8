@@ -1,6 +1,5 @@
 // dependencies
 const express = require("express");
-const path = require("path");
 const mysql = require("mysql");
 
 const app = express();
@@ -44,4 +43,6 @@ require("./app/routing/htmlRoutes")(app);
 // listener 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
-}); 
+});
+
+module.exports = app;

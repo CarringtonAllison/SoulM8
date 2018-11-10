@@ -14,25 +14,50 @@
 <body>
 
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col">
                 <h1>SoulM8</h1>
                 <p>Can You Find Love In 8 Questions? </p>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col">
-                <form >
+                <form id="friendInfo">
+                    <p>First Step</p>
                     <input id="name" type="text" placeholder="Enter Name">
-                    <input id="photo" type="file" placeholder="Add Photo">
-                   <button id="proceed">Proceed</button>
+                    <div>
+                        <p>Then</p>
+                        <label class="photoLb" for="photo">Select Photo</label>
+                    </div>
+                    <input id="photo" type="file" name="photo" />
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">Answer These Questions</div>
+                                <div id="head" class="card-body">
+                                    <div id="questions">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button id="proceed" class="card-body hidden">Find Match</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-        <script src="/javascript/survey.js"></script>
-    </body>
+    <script src="/javascript/survey.js"></script>
+</body>
 
 </html>
