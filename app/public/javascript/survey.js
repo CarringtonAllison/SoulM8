@@ -81,7 +81,7 @@ $(document).on("click", ".nextButton", function () {
         renderQuestions(index + 1)
 
     } else {
-        $("#proceed").show(500)
+        $("#proceed").show(600)
         $(".nextButton").hide(1000)
     }
 })

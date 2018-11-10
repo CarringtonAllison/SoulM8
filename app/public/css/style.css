@@ -1,13 +1,25 @@
 body {
     text-align: center; 
+    background-image: url("https://cdn.powerofpositivity.com/wp-content/uploads/2016/01/soulmate-relationship.jpg"); 
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 h1 {
     text-align: center; 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100px; 
+    font-family: 'Cursive';
+    font-size: 135px;
     color: red;
+    margin-bottom: 45px;
+    margin-top: -20px;
+
 }
 
+#intro {
+    font-family: 'Valentine';
+    font-size: 28px; 
+}
 
 .hidden {
     display: none; 
@@ -26,11 +38,13 @@ label {
     font-size: 1.25em;
     font-weight: 700;
     color: white;
-    background-color: black;
+    background-color: rgba(255, 0, 0, .6);
     display: inline-block;
     cursor: pointer;
     border-radius: 30px;
-    padding:5px 15px; 
+    padding:1px 45px; 
+    margin-top: 20px; 
+    font-size: 25px;
 
 }
 
@@ -42,15 +56,21 @@ label {
     margin: 15px auto; 
     border-radius: 30px;
     padding: 3px 25px;
+    background-color: rgb(135, 206, 235);
+
 }
 
 #name {
     text-align: center;
     border-radius: 30px;
+    background-color: rgba(135, 206, 235, .6);
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
 }
 
 #proceed {
-    margin: 20px auto; 
+    margin: 10px auto; 
     border-radius: 30px;
     padding:5px 15px; 
     color: white; 
@@ -61,10 +81,37 @@ label {
     padding: 0; 
 }
 
-.ghost {
-    background-color: red; 
+.card {
+    background-color: rgba(255, 0, 0, .3);    
+    margin-top: 25px;
 }
 
+.card-body {
+    background-color: rgba(0,0,0,.2);
+
+}
+.card-header {
+    color: white; 
+    font-weight: bold;
+    font-size: 20px;
+}
 .cardText {
     padding-top: 15px; 
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.ghost {
+    padding-bottom: 3px; 
+}
+
+@font-face {
+    font-family: 'Cursive';
+    src: url(../images/Sybelia\ Demo.ttf)
+}
+
+@font-face {
+    font-family: 'Valentine';
+    src: url(../images/I\ Found\ My\ Valentine\ -\ TTF.ttf)
 }
