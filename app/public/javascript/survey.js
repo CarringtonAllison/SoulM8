@@ -42,9 +42,9 @@ let answerArr = [];
 
 
 function renderQuestions(index) {
-    let $divCard = $("<div>")
-    var $form = $("<form>").attr("data-value", index).addClass("ghost")
-    var $question = $("<h5>").text(questions[index].question).addClass("cardText")
+    let $divCard = $("<div>");
+    var $form = $("<form>").attr("data-value", index).addClass("ghost");
+    var $question = $("<h5>").text(questions[index].question).addClass("cardText");
     $form.append($question);
 
     questions[index].answers.forEach(function (answer, i) {
@@ -54,12 +54,13 @@ function renderQuestions(index) {
         $form.append($radio);
         $form.append(answer);
     });
-    let $div = $("<div>")
-    let $button = $("<button>").data("question", index).text("Next").addClass("nextButton")
+    let $div = $("<div>");
+    let $button = $("<button>").data("question", index).text("Next").addClass("nextButton");
     $form.append($div);
-    $form.append($button)
-    $divCard.append($form)
+    $form.append($button);
+    $divCard.append($form);
     $("#head").append($divCard);
+    
 
 }
 
@@ -76,13 +77,13 @@ $(document).on("click", ".nextButton", function () {
     console.log($thatForm);
 
     if (index < 8) {
-        $(".ghost").data("value", index).hide(300);
+        $(".ghost").data("value", index).hide();
         checkTrivia(index);
         renderQuestions(index + 1)
 
     } else {
-        $("#proceed").show(600)
         $(".nextButton").hide(1000)
+        $("#proceed").show(600)
     }
 })
 
