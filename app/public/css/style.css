@@ -118,6 +118,8 @@ label {
 
 #exampleModalCenterTitle {
     text-align: center; 
+    font-family: 'Valentine';
+    font-size: 50px;
 }
 
 a {
@@ -126,4 +128,19 @@ a {
 
 a:hover {
     color: red; 
+}
+
+.modal-header {
+    background-color:#a97878;
+}
+
+#modalImg {
+    height: 250px;
+    width: auto;
+}
+
+.profName {
+    font-size: 40px;
+    font-family: 'Valentine';
+    background-color:#a97878;
 }

@@ -122,6 +122,7 @@ $(document).on("click", "#proceed", function (event) {
             let matchName = data[0].name; 
             let $img = $("<img>"); 
             $img.attr("src", matchPic)
+            $img.attr("id", "modalImg")
             $(".modal-body").append($img);
             $(".profName").append(matchName);      
             console.log(matchPic) 
