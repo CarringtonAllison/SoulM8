@@ -1,5 +1,5 @@
-{ 
-  "name": "Soul M8",
+{
+  "name": "fullstack-express",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,9 +10,17 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+    "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarringtonAllison/fullstack-express.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarringtonAllison/fullstack-express/issues"
+  },
+  "homepage": "https://github.com/CarringtonAllison/fullstack-express#readme"
 }
