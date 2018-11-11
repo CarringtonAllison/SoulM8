@@ -103,7 +103,7 @@ function checkTrivia(index) {
 
 
 
-$("#proceed").on("click", function (event) {
+$(document).on("click", "#proceed", function (event) {
     event.preventDefault();
 
     var newFriend = {
@@ -117,6 +117,13 @@ $("#proceed").on("click", function (event) {
     $.post("/api/friends", newFriend)
         .then(function (data) {
             console.log(data);
+            let matchPic = data[0].photo; 
+            let matchName = data[0].name; 
+            let $img = $("<img>"); 
+            $img.attr("src", matchPic)
+            $(".modal-body").append($img);
+            $(".profName").append(matchName);      
+            console.log(matchPic) 
+            console.log(matchName) 
         });
 });
-

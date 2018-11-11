@@ -49,13 +49,5 @@ module.exports = function (app) {
 
         // Once you're done comparing, add the new user to the potential friends data.
         friends.push(newUser);
-        
-        let mathcPIc = best.matches.photo; 
-        console.log(mathcPIc)
-        let $a = $("<a>"); 
-        $("close").append($a)
-        $("close").append(mathcPIc)
     });
-
-
 }

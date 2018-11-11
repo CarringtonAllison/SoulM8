@@ -115,3 +115,15 @@ label {
     font-family: 'Valentine';
     src: url(../images/I\ Found\ My\ Valentine\ -\ TTF.ttf)
 }
+
+#exampleModalCenterTitle {
+    text-align: center; 
+}
+
+a {
+    color: white; 
+}
+
+a:hover {
+    color: red; 
+}
