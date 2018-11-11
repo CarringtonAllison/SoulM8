@@ -12,11 +12,11 @@ module.exports = function (app) {
         var newUser = req.body;
         var differences = [];
 
-        console.log(newUser)
+        // console.log(newUser)
 
         // Step through these potential friends.
         friends.forEach(function (user) {
-            console.log(user)
+            // console.log(user)   
 
             var totalDifference = 0;
 
@@ -49,6 +49,13 @@ module.exports = function (app) {
 
         // Once you're done comparing, add the new user to the potential friends data.
         friends.push(newUser);
-
+        
+        let mathcPIc = best.matches.photo; 
+        console.log(mathcPIc)
+        let $a = $("<a>"); 
+        $("close").append($a)
+        $("close").append(mathcPIc)
     });
+
+
 }

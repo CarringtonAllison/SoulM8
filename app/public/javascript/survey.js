@@ -103,20 +103,20 @@ function checkTrivia(index) {
 
 
 
-$("#proceed").on("click", function(event) {
+$("#proceed").on("click", function (event) {
     event.preventDefault();
 
     var newFriend = {
-      name: $("#name").val().trim(),
-      photo: $("#photo").val().trim(),
-      scores: answerArr
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: answerArr
     };
-    console.log(newFriend)
-    
-        // Question: What does this code do??
-        $.post("/api/friends", newFriend)
-          .then(function(data) {
+    console.log(newFriend);
+
+    // Question: What does this code do??
+    $.post("/api/friends", newFriend)
+        .then(function (data) {
             console.log(data);
-          });
+        });
 });
 
